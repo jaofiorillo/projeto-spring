@@ -1,30 +1,32 @@
 package controler;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-
+import java.util.ArrayList;
+import java.util.List;
 import models.User;
 
 @RestController
 @RequestMapping("/user")
 public class userControler {
 
-   private List<User> users = new ArrayList<>();
+private List<User> users = new ArrayList<>();
 
-
-@GetMapping("/")
-public User user(){
+@GetMapping("/{id}")
+public User user(@PathVariable("id") long id){
    User user = new User();
-   user.setId(1);
+
+   user.setId(id);
    user.setNome("joao");
-   user.setUsuario("joao1");
+   user.setIdade(19);
+   user.setSexo('M');
+   user.setUsuario("joao123");
+   user.setSenha("123456");
+
 return user;
 }
 

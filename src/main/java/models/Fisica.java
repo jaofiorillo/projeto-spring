@@ -5,16 +5,15 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User extends Fisica {
+public class Fisica {
 
-    
-
-    String usuario;
-    String senha;
+    long id;
+    String nome;
+    int idade;
+    char sexo;
     
 }

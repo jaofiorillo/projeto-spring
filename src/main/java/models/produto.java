@@ -5,16 +5,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User extends Fisica {
+public class produto extends Vendedor {
 
     
-
-    String usuario;
-    String senha;
-    
+long id_prod;
+String nome_prod;
+String classe;
+float preço;
+  
 }
