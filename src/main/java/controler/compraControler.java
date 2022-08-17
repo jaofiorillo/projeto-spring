@@ -34,6 +34,7 @@ public class compraControler {
         compras.add(Compra);
         return Compra;
     }
+    
     @PostMapping("/list")
     public List<compra> list(){
        return compras;
